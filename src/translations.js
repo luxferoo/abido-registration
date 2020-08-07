@@ -16,7 +16,7 @@ module.exports = {
             server: 'مشكلة في الخادم ، يرجى المحاولة مرة أخرى لاحقًا'
         },
         success: {
-            registeration: 'تم التسجيل بنجاح'
+            registration: 'تم التسجيل بنجاح'
         }
     },
     en: {
@@ -36,7 +36,7 @@ module.exports = {
             server: 'Server problem, please try again later'
         },
         success: {
-            registeration: 'Registration successfully completed'
+            registration: 'Registration successfully completed'
         }
     },
     fr: {
@@ -56,7 +56,7 @@ module.exports = {
             server: 'Problème de serveur, priere de réessayer ultérieurement'
         },
         success: {
-            registeration: 'Inscription faite avec succès'
+            registration: 'Inscription faite avec succès'
         }
     },
     es: {
@@ -76,7 +76,7 @@ module.exports = {
             server: 'Problema del servidor, intente más tarde'
         },
         success: {
-            registeration: 'Registro completado con éxito'
+            registration: 'Registro completado con éxito'
         }
     }
 }
