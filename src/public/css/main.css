@@ -75,16 +75,6 @@ body {
     cursor: pointer;
 }
 
-.content__right__title::after{
-    content: '';
-    width: 50%;
-    background-color: purple;
-    height: 5px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
 .content__right__body .title {
     margin: 2rem 0;
 }

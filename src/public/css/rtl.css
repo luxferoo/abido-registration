@@ -2,11 +2,11 @@
     flex-direction: row-reverse;
 }
 
-.content__right__title::after{
+/*.content__right__title::after{
     bottom: 0;
     right: 0;
     left: unset;
-}
+}*/
 
 .content__right__body .title {
     text-align: right !important;
