@@ -78,4 +78,4 @@ app.use((_, res) => {
     res.send('Not found')
 })
 
-app.listen(82)
+app.listen(process.env.PORT || 3000)
