@@ -1,0 +1,18 @@
+{
+  "name": "abido",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "express-rate-limit": "^5.1.3",
+    "hbs": "^4.1.1",
+    "itranslator": "^2.0.2",
+    "mysql": "^2.18.1"
+  }
+}

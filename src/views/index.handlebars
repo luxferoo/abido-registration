@@ -1,0 +1,51 @@
+<div class="content">
+    <div class="content__left">d</div>
+    <div class="content__right">
+        <div class="content__right__header">
+            <h1 class="content__right__title">
+                {{trans 'title'}}
+            </h1>
+            <ul class="langs">
+                <li><a href="/?lang=ar" class="lang{{#if (isSelectedLang 'ar')}} selected{{/if}}">AR</a></li>
+                <li><a href="/?lang=en" class="lang{{#if (isSelectedLang 'en')}} selected{{/if}}">EN</a></li>
+                <li><a href="/?lang=fr" class="lang{{#if (isSelectedLang 'fr')}} selected{{/if}}">FR</a></li>
+                <li><a href="/?lang=es" class="lang{{#if (isSelectedLang 'es')}} selected{{/if}}">ES</a></li>
+            </ul>
+        </div>
+        <div class="content__right__body">
+            <h1 class="title">{{trans 'coming_soon'}}</h1>
+            <p class="text">
+                {{{trans 'presentation'}}}
+            </p>
+            <h1 class="title">{{trans 'pre_registration'}}</h1>
+            <p class="text">
+                {{{trans 'pre_registration_text'}}}
+            </p>
+            <form id="register_form" class="registration_form" method="POST">
+                <div class="registration_form__group choice">
+                    <!--<span>{{trans 'account_type_label'}} </span>-->
+                    <div>
+                        <input type="radio" id="simple_user" name="account_type" value="user">
+                        <label for="simple_user" required>{{trans 'user'}}</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="pro" name="account_type" value="pro">
+                        <label for="pro" required>{{trans 'pro'}}</label>
+                    </div>
+                </div>
+                <div class="registration_form__group">
+                    <input class="registration_form__email" type="email" id="email" name="email"
+                        placeholder="{{trans 'email_placeholder'}}" required />
+                    <input class="registration_form__submit" type="submit" id="submit" value="{{trans 'send'}}" />
+                </div>
+            </form>
+        </div>
+        <div class="content__right__footer">
+            <div class="social">
+                <label>{{trans 'stay_in_touch'}}</label>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </div>
+</div>

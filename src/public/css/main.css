@@ -1,0 +1,265 @@
+*{
+    font-family: open sans,sans-serif;
+}
+.content {
+    display: flex;
+    height: 100vh;
+}
+
+.important {
+    color: purple;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+body {
+    margin: 0
+}
+
+.content__left {
+    background-image: url(../img/wallpaper.jpg);
+    background-position: left;
+    background-size: cover;
+} 
+
+.content__right, .content__left {
+    flex: 1;
+    overflow-x: hidden;
+}
+
+.content__right {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+}
+
+.content__right__header {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: space-between;
+    align-items: center;
+    animation: moveInTop 1s ease-out;
+}
+
+.content__right__body {
+    padding: 5em 0;
+    flex: 1;
+    animation: moveInLeft 1s ease-out;
+}
+
+.langs {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+
+.langs .lang {
+    padding: .5rem;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: .1rem;
+    color: black;
+}
+
+.langs .lang:hover, .lang.selected  {
+    color: white;
+    background-color: black;
+}
+
+.content__right__title {
+    margin: 0;
+    font-size: 3rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.content__right__title::after{
+    content: '';
+    width: 50%;
+    background-color: purple;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.content__right__body .title {
+    margin: 2rem 0;
+}
+
+.text{
+    font-size: 1.2rem;
+}
+
+.registration_form__group{
+    display: flex;
+}
+
+.registration_form__email{
+    padding: .8rem;
+    border-radius: 0;
+    border: 1px solid grey;
+    border-right: none;
+}
+
+.registration_form__email:focus {
+    outline: none;
+}
+
+.registration_form__submit{
+    padding: 0 2rem;
+    background-color: purple;
+    cursor: pointer;
+    color: white;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    outline: none;
+}
+
+.registration_form__submit[disabled=true]{
+    background-color: gray;
+} 
+
+.registration_form__group.choice * {
+    cursor: pointer;
+}
+
+.registration_form__group.choice {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.registration_form__group.choice div {
+    margin-right: 1rem;
+}
+
+.registration_form__submit:hover {
+    opacity: .9;
+}
+
+.content__right__footer {
+    display: flex;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex: 1;
+    animation: opacity 2s ease-out;
+}
+
+.social label {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.fa {
+    padding: .5rem;
+    font-size: 1rem;
+    width: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid transparent;
+  }
+  
+  .fa-facebook:hover {
+    border: 1px solid #3B5998;
+  }
+  .fa-instagram:hover {
+    border: 1px solid #8f614a;
+  }
+  
+  .fa-facebook {
+    color: #3B5998;
+  }
+  
+  .fa-instagram {
+    color: #8f614a;
+  }
+
+  
+@media screen and (max-width: 992px) {
+    .content__left {
+        display: none;
+    }
+
+    .content__right {
+        padding: 1rem;
+    }
+
+    .content__right__body {
+        padding: 2rem 0;
+    }
+
+    .content__right__body .title {
+        margin: 1rem 0;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

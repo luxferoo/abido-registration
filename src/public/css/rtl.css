@@ -1,0 +1,36 @@
+.content__right__header {
+    flex-direction: row-reverse;
+}
+
+.content__right__title::after{
+    bottom: 0;
+    right: 0;
+    left: unset;
+}
+
+.content__right__body .title {
+    text-align: right !important;
+}
+
+.text{
+    text-align: right;
+}
+
+.registration_form__group{
+    flex-direction: row-reverse;
+}
+
+.registration_form__email{
+    border: 1px solid grey;
+    border-left: none;
+}
+
+.important {
+    color: purple;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.social {
+    flex-direction: row-reverse;
+}

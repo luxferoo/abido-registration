@@ -1,0 +1,15 @@
+mysql:
+    image: mariadb
+    ports:
+        - "3307:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: password
+phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+        - mysql
+    ports:
+        - "8183:80"
+    environment:
+        MYSQL_ROOT_PASSWORD: password
+        PMA_ARBITRARY: 1
