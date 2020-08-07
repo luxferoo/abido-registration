@@ -43,7 +43,6 @@ body {
 }
 
 .content__right__body {
-    padding: 5em 0;
     flex: 1;
     animation: moveInLeft 1s ease-out;
 }
@@ -181,10 +180,6 @@ body {
 
     .content__right {
         padding: 1rem;
-    }
-
-    .content__right__body {
-        padding: 2rem 0;
     }
 
     .content__right__body .title {
