@@ -17,6 +17,7 @@ con.connect(err => {
             await con.query(`CREATE TABLE IF NOT EXISTS users (
                    id int NOT NULL AUTO_INCREMENT,
                    email varchar(50) NOT NULL UNIQUE,
+                   phone varchar(50),
                    isPro tinyint(1) DEFAULT 0,
                    PRIMARY KEY (id)
         )`)

@@ -9,10 +9,10 @@ const createConnection = () => mysql.createConnection({
 })
 
 module.exports = {
-    insert: ({ email, isPro }, cb = () => { }) => {
+    insert: ({ email, isPro, phone }, cb = () => { }) => {
         const con = createConnection()
-        const sql = `INSERT INTO users (email, isPro) VALUES(?,?)`
-        const values = [email.trim(), isPro]
+        const sql = `INSERT INTO users (email, isPro, phone) VALUES(?,?,?)`
+        const values = [email.trim(), isPro, phone.trim()]
         con.query(sql, values, (err, results, fields) => {
             if (err) return cb(err)
             cb(null, results)

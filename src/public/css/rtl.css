@@ -20,11 +20,6 @@
     flex-direction: row-reverse;
 }
 
-.registration_form__email{
-    border: 1px solid grey;
-    border-left: none;
-}
-
 .important {
     color: purple;
     font-size: 1.8rem;

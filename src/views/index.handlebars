@@ -36,6 +36,12 @@
                 <div class="registration_form__group">
                     <input class="registration_form__email" type="email" id="email" name="email"
                         placeholder="{{trans 'email_placeholder'}}" required />
+                </div>
+                <div class="registration_form__group">
+                    <input class="registration_form__tel" type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+                        placeholder="{{trans 'phone_placeholder'}}" required>
+                </div>
+                <div class="registration_form__group">
                     <input class="registration_form__submit" type="submit" id="submit" value="{{trans 'send'}}" />
                 </div>
             </form>

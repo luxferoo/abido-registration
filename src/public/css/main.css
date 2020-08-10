@@ -1,6 +1,11 @@
 *{
     font-family: open sans,sans-serif;
 }
+
+.registration_form{
+    width: 24rem;
+}
+
 .content {
     display: flex;
     height: 100vh;
@@ -84,21 +89,22 @@ body {
 
 .registration_form__group{
     display: flex;
+    margin-bottom: .5rem;
 }
 
-.registration_form__email{
+.registration_form__email,.registration_form__tel{
     padding: .8rem;
     border-radius: 0;
     border: 1px solid grey;
-    border-right: none;
+    flex: 1;
 }
 
-.registration_form__email:focus {
+.registration_form__email:focus,.registration_form__tel:focus {
     outline: none;
 }
 
 .registration_form__submit{
-    padding: 0 2rem;
+    padding: .8rem;
     background-color: purple;
     cursor: pointer;
     color: white;
@@ -106,6 +112,7 @@ body {
     border: none;
     margin: 0;
     outline: none;
+    flex: 1;
 }
 
 .registration_form__submit[disabled=true]{

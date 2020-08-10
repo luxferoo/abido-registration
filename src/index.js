@@ -46,7 +46,7 @@ const limiter = rateLimit({
 })
 
 app.post('/', limiter, (req, res) => {
-    const { email, account_type } = req.body
+    const { email, account_type, phone } = req.body
     const lang = getLang(req.query.lang && req.query.lang.toLowerCase())
 
     if (req.headers['content-length'] > maxData) {
@@ -60,12 +60,13 @@ app.post('/', limiter, (req, res) => {
     }
 
 
-    insertUser({ email, isPro: account_type === 'pro' }, err => {
+    insertUser({ email, phone, isPro: account_type === 'pro' }, err => {
         if (err) {
             if (err.code === 'ER_DUP_ENTRY') {
                 res.status(409)
                 return res.json({ message: trans(`${lang}.errors.${err.code}`, { vars: { email } }) })
             }
+            console.log(err)
             res.status(500)
             return res.json({ message: trans(`${lang}.errors.server`) })
         }
