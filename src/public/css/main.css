@@ -3,7 +3,7 @@
 }
 
 .registration_form{
-    width: 24rem;
+    max-width: 25rem;
     margin: auto;
 }
 
